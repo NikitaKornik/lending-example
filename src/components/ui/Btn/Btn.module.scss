@@ -1,0 +1,38 @@
+.root {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+
+  transition: opacity 0.2s;
+}
+
+.text {
+  display: inline-block;
+}
+
+.iconLeft,
+.iconRight {
+  display: flex;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.primary {
+  background: black;
+  color: white;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,21 @@
+:root {
+  --black: #111111;
+  --white: #ffffff;
+
+  --sand: #d6c3a5;
+  --sand-light: #efe6d6;
+  --sand-dark: #b8a07a;
+
+  /* text */
+  --text-primary: var(--black);
+  --text-secondary: #4b4b4b;
+  --text-muted: #7a7a7a;
+
+  /* background */
+  --bg-primary: var(--white);
+  --bg-secondary: #f6f3ee;
+  --bg-accent: var(--sand-light);
+
+  /* borders */
+  --border: #e7e0d6;
+}
