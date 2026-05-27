@@ -1,21 +1,26 @@
 .root {
   cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 8px;
 
-  transition: opacity 0.2s;
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .text {
+  padding: 0px 3px;
   display: inline-block;
 }
 
@@ -23,13 +28,18 @@
 .iconRight {
   display: flex;
   align-items: center;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.2em;
+  height: 1.2em;
 }
 
 .primary {
   background: black;
   color: white;
+}
+
+.secondary {
+  background: rgb(220, 220, 220);
+  color: rgb(0, 0, 0);
 }
 
 .disabled {
