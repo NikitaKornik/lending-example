@@ -1,15 +1,17 @@
-import Btn from "../../components/ui/Btn/Btn";
+import Features from "../../components/Features/Features";
+import Hero from "../../components/Hero/Hero";
+import HowWeWork from "../../components/HowWeWork/HowWeWork";
+import OurProjects from "../../components/OurProjects/OurProjects";
 
 import s from "./Home.module.scss";
-
-import Launch from "@/assets/icons/launch.svg?react";
 
 export default function Home() {
   return (
     <div>
-      <Btn variant="primary" rightIcon={<Launch />}>
-        Botton
-      </Btn>
+      {/* <Hero /> */}
+      <Features />
+      <OurProjects />
+      <HowWeWork />
     </div>
   );
 }

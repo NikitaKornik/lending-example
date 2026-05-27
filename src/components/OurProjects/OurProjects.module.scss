@@ -1,0 +1,139 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/typography.scss";
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 0px 30px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .h2 {
+    text-align: center;
+    font-size: var(--text-3xl);
+    margin-bottom: 50px;
+
+    @include md {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: 82vw;
+    min-width: 330px;
+    max-width: max-content;
+
+    overflow-x: auto;
+    list-style-type: none;
+    margin-bottom: 50px;
+
+    .filterItem {
+      cursor: pointer;
+
+      white-space: nowrap;
+      background-color: rgb(223, 223, 223);
+      border-radius: 15px;
+      padding: 10px 20px;
+      transition: opacity 0.2s ease-in-out, background-color 0.4s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.active {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  .projects {
+    list-style-type: none;
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0px 20px;
+      grid-template-areas:
+        "img h3"
+        "img category";
+
+      @include md {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+          "img"
+          "h3"
+          "category";
+      }
+
+      .imgContainer {
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include md {
+          aspect-ratio: 2 / 1;
+        }
+
+        .img {
+          height: 100%;
+          width: auto;
+          transition: transform 0.5s ease-in-out;
+
+          @include md {
+            height: auto;
+            width: 100%;
+          }
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      .a {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: end;
+        grid-area: h3;
+        font-size: var(--text-lg);
+        font-weight: bold;
+      }
+
+      .category {
+        grid-area: category;
+        font-size: var(--text-md);
+      }
+    }
+  }
+}

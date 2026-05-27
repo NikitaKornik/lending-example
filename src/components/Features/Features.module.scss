@@ -1,0 +1,80 @@
+@import "/src/styles/typography.scss";
+@import "/src/styles/breakpoints.scss";
+
+.root {
+  display: grid;
+  list-style-type: none;
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  margin-bottom: 80px;
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .item {
+    margin: 20px;
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+      "svg title"
+      "svg info";
+    gap: 8px 30px;
+    align-items: center;
+    position: relative;
+
+    @include lg {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "svg"
+        "title"
+        "info";
+      text-align: start;
+      justify-items: start;
+      padding: 0px 50px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 70%;
+        background-color: black;
+        opacity: 0.3;
+        right: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+
+    .svg {
+      grid-area: svg;
+      width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title {
+      grid-area: title;
+      font-size: var(--text-xl);
+      margin-bottom: 10px;
+    }
+
+    .info {
+      grid-area: info;
+      font-size: var(--text-lg);
+    }
+  }
+}

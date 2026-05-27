@@ -1,0 +1,75 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/typography.scss";
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  max-width: 1440px;
+  padding: 50px 0px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  background-color: rgb(231, 225, 216);
+
+  .h2 {
+    text-align: center;
+    font-size: var(--text-3xl);
+    margin-bottom: 30px;
+
+    @include lg {
+      font-size: var(--text-4xl);
+      margin-bottom: 20px;
+    }
+  }
+
+  .list {
+    list-style-type: none;
+
+    @include lg {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+    }
+
+    .listItem{
+      display: grid;
+      gap: 0px 20px;
+      grid-template-columns: 50px 1fr;
+      grid-template-areas:
+      "step h3"
+      "step desc";
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      padding: 30px 0px;
+      margin: 0px 30px;
+
+      @include lg {
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "step"
+        "h3"
+        "desc";
+        border-bottom: none;
+      }
+
+      .step{
+        grid-area: step;
+        font-size: var(--text-4xl);
+      }
+      .h3{
+        grid-area: h3;
+        font-size: var(--text-xl);
+
+        @include lg {
+          margin-top: 10px;
+        }
+      }
+      .desc{
+        grid-area: desc;
+        font-size: var(--text-xl);
+        margin-top: 10px;
+      }
+    }
+  }
+}
