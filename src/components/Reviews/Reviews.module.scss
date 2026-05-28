@@ -1,0 +1,73 @@
+@import "/src/styles/breakpoints.scss";
+@import "/src/styles/typography.scss";
+
+.root {
+  max-width: 1440px;
+  padding: 0px 30px;
+  margin-bottom: 80px;
+
+  .h2 {
+    text-align: center;
+    font-size: var(--text-3xl);
+    margin-bottom: 50px;
+
+    @include md {
+      font-size: var(--text-4xl);
+    }
+  }
+  .list {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .listItem {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      padding: 30px 90px 30px 30px;
+      border-radius: 15px;
+
+      .comment {
+        display: block;
+        margin-bottom: 30px;
+        font-size: var(--text-md);
+        height: 55px;
+        overflow-y: scroll;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .img {
+          width: 55px;
+          height: 55px;
+        }
+        .userData {
+          display: flex;
+          justify-content: start;
+          align-items: start;
+          flex-direction: column;
+          gap: 5px;
+
+          .userName {
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            font-size: var(--text-md);
+          }
+          .userPlace {
+            font-size: var(--text-md);
+          }
+        }
+      }
+    }
+  }
+}
