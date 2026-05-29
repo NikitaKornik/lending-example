@@ -46,6 +46,7 @@
 
       @include lg {
         grid-template-columns:1fr;
+        grid-template-rows: 60px 40px auto;
         grid-template-areas:
         "step"
         "h3"
@@ -60,15 +61,15 @@
       .h3{
         grid-area: h3;
         font-size: var(--text-xl);
-
-        @include lg {
-          margin-top: 10px;
-        }
       }
       .desc{
         grid-area: desc;
         font-size: var(--text-xl);
         margin-top: 10px;
+
+        @include lg {
+          margin-top: 0;
+        }
       }
     }
   }
