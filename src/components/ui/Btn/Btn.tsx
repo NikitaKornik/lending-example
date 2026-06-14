@@ -2,13 +2,10 @@ import cn from 'classnames'
 
 import s from './Btn.module.scss'
 
-type Props = {
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: React.ReactNode
-  onClick?: () => void
-  disabled?: boolean
   className?: string
   variant?: 'primary' | 'secondary'
-  type?: 'button' | 'submit' | 'reset'
 
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
@@ -23,9 +20,11 @@ export default function Btn({
   type = 'button',
   leftIcon,
   rightIcon,
+  ...props
 }: Props) {
   return (
     <button
+      {...props}
       type={type}
       onClick={onClick}
       disabled={disabled}
