@@ -2,83 +2,155 @@
 @import "../../styles/breakpoints.scss";
 
 .root {
-  background-color: black;
   width: 100%;
-  padding: 50px 30px 0px;
-  color: white;
+  padding: 52px 20px 0;
+  color: var(--color-white);
+  background: var(--color-black);
+}
 
-  .footerContainer {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    gap: 50px;
+.footerContainer {
+  display: grid;
+  gap: 34px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 
-    @include lg {
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
-
-    .logo {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-
-      @include lg {
-        width: auto;
-        justify-content: start;
-      }
-
-      & > img {
-        width: 200px;
-      }
-    }
-
-    .title {
-      margin-bottom: 20px;
-      font-size: var(--text-xl);
-    }
-
-    .ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      & > li {
-        color: rgb(150, 150, 150);
-        transition: color 0.2s ease-in-out;
-        display: flex;
-        height: 22px;
-
-        &:hover,
-        &:hover a {
-          color: white;
-        }
-
-        .svg {
-          margin-right: 10px;
-        }
-      }
-
-      & > li > a {
-        color: rgb(150, 150, 150);
-        text-decoration: none;
-        transition: color 0.2s ease-in-out;
-      }
-    }
+  @include md {
+    grid-template-columns: 1.2fr 0.7fr 0.8fr;
   }
 
-  .copyright{
-    border-top: 1px solid rgb(150, 150, 150);;
-    color: rgb(150, 150, 150);
-    padding: 25px 0px;
-    margin-top: 30px;
-    font-size: var(--text-sm);
-    text-align: center;
+  @include lg {
+    grid-template-columns: 1.25fr 0.55fr 0.7fr 1fr;
+    gap: 42px;
+  }
+}
 
-    @include lg {
-      text-align: start;
+.brandBlock {
+  max-width: 430px;
+
+  p {
+    margin: 22px 0 24px;
+    color: var(--white-70);
+    font-size: var(--text-lg);
+    line-height: var(--lh-normal);
+  }
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--white-18);
+  border-radius: 8px;
+  color: var(--color-white);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+
+  &:hover {
+    border-color: var(--color-white);
+    background: var(--white-06);
+    transform: translateY(-2px);
+  }
+}
+
+.title {
+  margin-bottom: 18px;
+  color: var(--white-62);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+}
+
+.footerNav {
+  ul {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+  }
+
+  li,
+  a {
+    color: var(--white-70);
+    line-height: var(--lh-normal);
+    text-decoration: none;
+  }
+
+  a {
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-white);
     }
+  }
+}
+
+.contactBlock {
+  padding: 22px;
+  border: 1px solid var(--white-18);
+  border-radius: 8px;
+  background: var(--white-06);
+
+  ul {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    color: var(--white-62);
+  }
+
+  span,
+  a {
+    display: block;
+  }
+
+  span {
+    margin-bottom: 4px;
+    color: var(--white-62);
+    font-size: var(--text-sm);
+  }
+
+  a {
+    color: var(--color-white);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-normal);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-sand-light);
+    }
+  }
+}
+
+.footerBottom {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 44px auto 0;
+  padding: 22px 0;
+  border-top: 1px solid var(--white-18);
+  color: var(--white-62);
+  font-size: var(--text-sm);
+
+  @include md {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
   }
 }

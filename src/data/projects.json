@@ -1,0 +1,398 @@
+[
+  {
+    "id": 0,
+    "slug": "minimalist-living-room",
+    "title": "Minimalist Living Room",
+    "design": "Modern",
+    "category": "Living Room",
+    "palette": "Warm neutral",
+    "img": "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1400&q=85",
+    "description": "A light-filled living space shaped around soft seating, warm wood, and a calm neutral palette.",
+    "location": "Brooklyn townhouse",
+    "year": "2026",
+    "area": "42 m2",
+    "timeline": "8 weeks",
+    "brief": "The client wanted a relaxed room for hosting friends, reading, and everyday family time without losing the clean architectural feel of the house.",
+    "details": [
+      "Layered natural textures to make the minimal palette feel warm.",
+      "Planned flexible seating for both quiet evenings and small gatherings.",
+      "Used low furniture to keep the window wall open and bright."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+  {
+    "id": 1,
+    "slug": "stone-oak-kitchen",
+    "title": "Stone & Oak Kitchen",
+    "design": "Contemporary",
+    "category": "Kitchen",
+    "palette": "Stone and oak",
+    "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=85",
+    "description": "A contemporary kitchen with practical storage, stone surfaces, and warm oak details.",
+    "location": "California family home",
+    "year": "2025",
+    "area": "28 m2",
+    "timeline": "10 weeks",
+    "brief": "The goal was to make daily cooking easier while keeping the kitchen open, clean, and connected to the dining area.",
+    "details": [
+      "Moved tall storage to one wall to free the main preparation zone.",
+      "Balanced durable stone with warmer oak to avoid a cold showroom feel.",
+      "Added layered lighting for preparation, dining, and evening mood."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "quiet-bedroom-suite",
+    "title": "Quiet Bedroom Suite",
+    "design": "Scandinavian",
+    "category": "Bedroom",
+    "palette": "Soft green",
+    "img": "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1400&q=85",
+    "description": "A peaceful bedroom suite designed with soft contrast, generous textiles, and hidden storage.",
+    "location": "Paris apartment",
+    "year": "2026",
+    "area": "31 m2",
+    "timeline": "6 weeks",
+    "brief": "The bedroom needed to feel restful and uncluttered while still supporting dressing, reading, and compact apartment storage.",
+    "details": [
+      "Used muted wall color to frame the bed and reduce visual noise.",
+      "Built storage around daily routines rather than generic wardrobes.",
+      "Selected soft lighting so the room works from morning to late evening."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "spa-inspired-bathroom",
+    "title": "Spa Inspired Bathroom",
+    "design": "Modern",
+    "category": "Bathroom",
+    "palette": "Stone and oak",
+    "img": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1400&q=85",
+    "description": "A compact bathroom turned into a calm spa-like retreat with stone, glass, and warm lighting.",
+    "location": "West Village apartment",
+    "year": "2025",
+    "area": "12 m2",
+    "timeline": "7 weeks",
+    "brief": "The client wanted hotel-level comfort in a small footprint, with better storage and a softer morning routine.",
+    "details": [
+      "Used large format surfaces to make the room feel wider.",
+      "Integrated niches and mirrored storage to remove visual clutter.",
+      "Specified warm dimmable lighting for a softer evening atmosphere."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "soft-dining-room",
+    "title": "Soft Dining Room",
+    "design": "Natural",
+    "category": "Living Room",
+    "palette": "Earth tones",
+    "img": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=1400&q=85",
+    "description": "A generous dining area with tactile finishes, comfortable chairs, and a slower weekend mood.",
+    "location": "New Jersey house",
+    "year": "2025",
+    "area": "24 m2",
+    "timeline": "5 weeks",
+    "brief": "The space needed to work for weekday meals, long dinners, and occasional laptop work without feeling formal.",
+    "details": [
+      "Chose rounded furniture to soften the room and improve circulation.",
+      "Layered a large pendant with wall lighting for flexible atmosphere.",
+      "Used washable textures that still feel refined and natural."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "loft-interior",
+    "title": "Loft Interior",
+    "design": "Industrial",
+    "category": "Living Room",
+    "palette": "Monochrome",
+    "img": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85",
+    "description": "An industrial loft softened with tailored furniture, art, warm textiles, and layered lighting.",
+    "location": "SoHo loft",
+    "year": "2026",
+    "area": "68 m2",
+    "timeline": "9 weeks",
+    "brief": "The client loved the raw shell but needed the open-plan space to feel comfortable, zoned, and more personal.",
+    "details": [
+      "Created clear zones without closing down the open loft volume.",
+      "Balanced metal and concrete with linen, leather, and warm timber.",
+      "Curated oversized art to give the space identity and scale."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "japandi-bathroom-retreat",
+    "title": "Japandi Bathroom Retreat",
+    "design": "Japandi",
+    "category": "Bathroom",
+    "palette": "Warm neutral",
+    "img": "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&w=1400&q=85",
+    "description": "A quiet bathroom with timber accents, matte stone, and a very simple storage rhythm.",
+    "location": "Austin guest suite",
+    "year": "2026",
+    "area": "15 m2",
+    "timeline": "6 weeks",
+    "brief": "The room needed to feel slower and more ritual-focused without becoming visually empty.",
+    "details": [
+      "Paired warm timber with matte mineral surfaces.",
+      "Reduced visible hardware for a calmer first impression.",
+      "Added soft indirect lighting near the bathing zone."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 7,
+    "slug": "classic-city-kitchen",
+    "title": "Classic City Kitchen",
+    "design": "Classic",
+    "category": "Kitchen",
+    "palette": "Cool gray",
+    "img": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1400&q=85",
+    "description": "A compact city kitchen with tailored cabinetry, gray stone, and polished brass details.",
+    "location": "Upper East Side apartment",
+    "year": "2024",
+    "area": "18 m2",
+    "timeline": "9 weeks",
+    "brief": "The client needed a hardworking kitchen that still matched the apartment's older architectural language.",
+    "details": [
+      "Used full-height cabinetry to increase storage.",
+      "Kept appliances integrated to preserve a classic rhythm.",
+      "Selected gray stone for durability and quiet contrast."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 8,
+    "slug": "terracotta-bedroom",
+    "title": "Terracotta Bedroom",
+    "design": "Mediterranean",
+    "category": "Bedroom",
+    "palette": "Terracotta",
+    "img": "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=85",
+    "description": "A bedroom warmed with plaster tones, linen bedding, and hand-finished side tables.",
+    "location": "Miami townhouse",
+    "year": "2025",
+    "area": "26 m2",
+    "timeline": "5 weeks",
+    "brief": "The space needed warmth and personality while staying restful enough for daily use.",
+    "details": [
+      "Used terracotta as a grounding color rather than an accent.",
+      "Mixed linen, ceramic, and aged timber for tactility.",
+      "Kept the furniture low to make the ceiling feel taller."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 9,
+    "slug": "monochrome-powder-room",
+    "title": "Monochrome Powder Room",
+    "design": "Minimalist",
+    "category": "Bathroom",
+    "palette": "Monochrome",
+    "img": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=85",
+    "description": "A small powder room with crisp black fixtures, white surfaces, and graphic lighting.",
+    "location": "Chicago row house",
+    "year": "2024",
+    "area": "7 m2",
+    "timeline": "4 weeks",
+    "brief": "The brief was to make a tiny room memorable while keeping maintenance simple.",
+    "details": [
+      "Used contrast to create impact in a small footprint.",
+      "Specified easy-clean surfaces with minimal grout lines.",
+      "Added one sculptural fixture as the focal point."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 10,
+    "slug": "coastal-light-kitchen",
+    "title": "Coastal Light Kitchen",
+    "design": "Coastal",
+    "category": "Kitchen",
+    "palette": "Coastal light",
+    "img": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85",
+    "description": "An airy kitchen with pale timber, soft whites, and open shelving for relaxed hosting.",
+    "location": "Cape Cod cottage",
+    "year": "2026",
+    "area": "34 m2",
+    "timeline": "8 weeks",
+    "brief": "The owners wanted the kitchen to feel bright and informal, with enough storage for seasonal family stays.",
+    "details": [
+      "Used pale timber to keep the space relaxed.",
+      "Created one open display wall for everyday ceramics.",
+      "Balanced open shelving with concealed storage."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 11,
+    "slug": "green-reading-room",
+    "title": "Green Reading Room",
+    "design": "Classic",
+    "category": "Living Room",
+    "palette": "Soft green",
+    "img": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1400&q=85",
+    "description": "A compact sitting room with book storage, green walls, and layered task lighting.",
+    "location": "Boston brownstone",
+    "year": "2025",
+    "area": "19 m2",
+    "timeline": "5 weeks",
+    "brief": "The room needed to become a quiet reading zone without disconnecting from the rest of the home.",
+    "details": [
+      "Built shelving around the existing window.",
+      "Used a muted green to make the room feel calm and contained.",
+      "Layered table, floor, and picture lighting."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 12,
+    "slug": "scandinavian-family-kitchen",
+    "title": "Scandinavian Family Kitchen",
+    "design": "Scandinavian",
+    "category": "Kitchen",
+    "palette": "Warm neutral",
+    "img": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+    "description": "A family kitchen with simple cabinetry, durable surfaces, and a generous breakfast zone.",
+    "location": "Seattle home",
+    "year": "2026",
+    "area": "36 m2",
+    "timeline": "9 weeks",
+    "brief": "The kitchen had to support cooking, homework, breakfast, and guests without becoming visually busy.",
+    "details": [
+      "Separated prep and breakfast zones for easier daily use.",
+      "Used durable matte finishes for family traffic.",
+      "Kept visual lines simple and bright."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 13,
+    "slug": "industrial-guest-bedroom",
+    "title": "Industrial Guest Bedroom",
+    "design": "Industrial",
+    "category": "Bedroom",
+    "palette": "Monochrome",
+    "img": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1400&q=85",
+    "description": "A guest bedroom softened with charcoal textiles, warm leather, and simple metal details.",
+    "location": "Denver loft",
+    "year": "2025",
+    "area": "22 m2",
+    "timeline": "4 weeks",
+    "brief": "The room needed to feel connected to the loft shell but still comfortable for longer stays.",
+    "details": [
+      "Softened industrial finishes with layered textiles.",
+      "Added compact storage for weekend guests.",
+      "Kept the palette restrained and easy to maintain."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 14,
+    "slug": "earth-tone-primary-suite",
+    "title": "Earth Tone Primary Suite",
+    "design": "Natural",
+    "category": "Bedroom",
+    "palette": "Earth tones",
+    "img": "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=1400&q=85",
+    "description": "A primary bedroom with grounded color, wool textures, and a quiet dressing corner.",
+    "location": "Portland house",
+    "year": "2026",
+    "area": "38 m2",
+    "timeline": "7 weeks",
+    "brief": "The owners wanted a restorative room that felt personal but not decorative.",
+    "details": [
+      "Used earth tones to connect the room to the garden view.",
+      "Created a compact dressing corner with soft task lighting.",
+      "Selected wool and linen for subtle texture."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 15,
+    "slug": "cool-gray-bathroom",
+    "title": "Cool Gray Bathroom",
+    "design": "Contemporary",
+    "category": "Bathroom",
+    "palette": "Cool gray",
+    "img": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85",
+    "description": "A clean bathroom with gray stone, recessed storage, and a precise lighting plan.",
+    "location": "Toronto condo",
+    "year": "2024",
+    "area": "10 m2",
+    "timeline": "5 weeks",
+    "brief": "The space needed to feel larger, sharper, and easier to use before busy workdays.",
+    "details": [
+      "Used continuous gray surfaces to visually expand the room.",
+      "Recessed storage to reduce clutter around the sink.",
+      "Added bright task lighting and softer night lighting."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 16,
+    "slug": "japandi-living-gallery",
+    "title": "Japandi Living Gallery",
+    "design": "Japandi",
+    "category": "Living Room",
+    "palette": "Stone and oak",
+    "img": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
+    "description": "A calm living room with sculptural storage, oak flooring, and a curated art wall.",
+    "location": "San Francisco apartment",
+    "year": "2026",
+    "area": "45 m2",
+    "timeline": "8 weeks",
+    "brief": "The client wanted a living area that worked as both a quiet lounge and a small art display.",
+    "details": [
+      "Used low storage to keep the room visually open.",
+      "Balanced oak warmth with pale stone and linen.",
+      "Designed the wall layout around changing artwork."
+    ],
+    "gallery": []
+  },
+  {
+    "id": 17,
+    "slug": "terracotta-kitchen-nook",
+    "title": "Terracotta Kitchen Nook",
+    "design": "Mediterranean",
+    "category": "Kitchen",
+    "palette": "Terracotta",
+    "img": "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=1400&q=85",
+    "description": "A compact kitchen nook with clay-toned tile, open shelves, and soft morning light.",
+    "location": "Los Angeles bungalow",
+    "year": "2025",
+    "area": "16 m2",
+    "timeline": "5 weeks",
+    "brief": "The owners wanted a small but expressive kitchen corner for coffee, breakfast, and casual cooking.",
+    "details": [
+      "Used clay tile as the main character of the space.",
+      "Added open shelves for everyday pieces and warm texture.",
+      "Kept the cabinetry simple so the palette could lead."
+    ],
+    "gallery": []
+  }
+]

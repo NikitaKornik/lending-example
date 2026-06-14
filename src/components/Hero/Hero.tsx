@@ -1,28 +1,45 @@
-import HeroImg from "@/assets/images/hero.jpg";
+import { Link } from "react-router-dom";
 
 import s from "./Hero.module.scss";
 
-import Btn from "../ui/Btn/Btn";
-
-import ArrowRight from "@/assets/icons/arrow-right.svg?react";
+const heroImg =
+  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=85";
 
 export default function Hero() {
   return (
     <div className={s.root}>
       <div className={s.info}>
-        <h5>WE DESIGN SPACES YOU'LL LOVE</h5>
-        <h3>Interior design that reflects your style.</h3>
+        <h5>INTERIOR STUDIO</h5>
+        <h3>Spaces shaped around the way you live.</h3>
         <div className={s.desc}>
-          We create beautiful, functional spaces tailored to your lifestyle and
-          preferences.
+          We design warm, functional interiors for homes, apartments, and
+          boutique spaces with a calm, detail-led process.
         </div>
+        <ul className={s.stats}>
+          <li>
+            <strong>120+</strong>
+            <span>finished rooms</span>
+          </li>
+          <li>
+            <strong>8</strong>
+            <span>years of practice</span>
+          </li>
+          <li>
+            <strong>4.9</strong>
+            <span>client rating</span>
+          </li>
+        </ul>
         <div className={s.btns}>
-          <Btn rightIcon={<ArrowRight />}>Our Projects</Btn>
-          <Btn variant="secondary">Book a consultation</Btn>
+          <Link to="/projects">Our Projects</Link>
+          <Link to="/contact">Book a consultation</Link>
         </div>
       </div>
       <div className={s.imgWrapper}>
-        <img src={HeroImg} alt="Hero" />
+        <img src={heroImg} alt="Bright modern living room with neutral furniture" />
+        <div className={s.note}>
+          <span>Latest project</span>
+          <strong>Warm minimal apartment</strong>
+        </div>
       </div>
     </div>
   );

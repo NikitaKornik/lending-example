@@ -1,92 +1,88 @@
+import { Link } from "react-router-dom";
+
 import s from "./Footer.module.scss";
 
+import BrandLogo from "../BrandLogo/BrandLogo";
+import { contacts, visitInfo } from "../../data/contact";
 import PhoneSvg from "@/assets/icons/phone.svg?react";
 import EmailSvg from "@/assets/icons/email.svg?react";
 
-import logo from "@/assets/images/logo.png";
+const studioLinks = [
+  { label: "Studio", to: "/studio" },
+  { label: "Projects", to: "/projects" },
+  { label: "Contact", to: "/contact" },
+];
+
+const services = [
+  "Interior design",
+  "Furniture selection",
+  "Lighting plans",
+  "Renovation styling",
+  "Consultations",
+];
 
 export default function Footer() {
+  const [addressInfo, hoursInfo] = visitInfo;
+
   return (
-    <div className={s.root}>
+    <footer className={s.root}>
       <div className={s.footerContainer}>
-        <div className={s.logo}>
-          <img className={s.logoImg} src={logo} alt="Furniture logo" />
-        </div>
-        <div>
-          <div className={s.title}>ИНФОРМАЦИЯ</div>
-          <ul className={s.ul}>
-            <li>
-              <a href="#">Наши магазины</a>
-            </li>
-            <li>
-              <a href="#">О компании</a>
-            </li>
-            <li>
-              <a href="#">Обратная связь</a>
-            </li>
-            <li>
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li>
-              <a href="#">Политика конфиденциальности</a>
-            </li>
-            <li>
-              <a href="#">Гарантийные обязательства</a>
-            </li>
-            <li>
-              <a href="#">Мебель в кредит</a>
-            </li>
+        <section className={s.brandBlock}>
+          <BrandLogo variant="light" />
+          <p>
+            Calm, practical interiors shaped around materials, light, and the
+            way each room is lived in.
+          </p>
+          <Link className={s.cta} to="/contact">
+            Book a consultation
+          </Link>
+        </section>
+
+        <nav className={s.footerNav} aria-label="Footer navigation">
+          <div className={s.title}>STUDIO</div>
+          <ul>
+            {studioLinks.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to}>{link.label}</Link>
+              </li>
+            ))}
           </ul>
-        </div>
-        <div>
-          <div className={s.title}>ДЛЯ ПОКУПАТЕЛЯ</div>
-          <ul className={s.ul}>
-            <li>
-              <a href="#">Регистрация</a>
-            </li>
-            <li>
-              <a href="#">Кабинет покупателя</a>
-            </li>
-            <li>
-              <a href="#">История заказов</a>
-            </li>
-            <li>
-              <a href="#">Избранные товары</a>
-            </li>
-            <li>
-              <a href="#">Служба поддержки</a>
-            </li>
-            <li>
-              <a href="#">Обмен / Возврат</a>
-            </li>
-            <li>
-              <a href="#">Договор оферты</a>
-            </li>
+        </nav>
+
+        <section className={s.footerNav}>
+          <div className={s.title}>SERVICES</div>
+          <ul>
+            {services.map((service) => (
+              <li key={service}>{service}</li>
+            ))}
           </ul>
-        </div>
-        <div>
-          <div className={s.title}>КОНТАКТЫ</div>
-          <ul className={s.ul}>
-            <li>
-              <PhoneSvg className={s.svg} />
-              <a href="#">+(7) 777 777 77</a>
-            </li>
-            <li>
-              <PhoneSvg className={s.svg} />
-              <a href="#">+(7) 777 777 77</a>
-            </li>
-            <li>
-              <EmailSvg className={s.svg} />
-              <a href="#">info@info.com</a>
-            </li>
-            <li>
-              <EmailSvg className={s.svg} />
-              <a href="#">info@info.com</a>
-            </li>
+        </section>
+
+        <section className={s.contactBlock}>
+          <div className={s.title}>CONTACT</div>
+          <ul>
+            {contacts.map((contact) => {
+              const Icon = contact.type === "phone" ? PhoneSvg : EmailSvg;
+
+              return (
+                <li key={contact.value}>
+                  <Icon className={s.svg} />
+                  <div>
+                    <span>{contact.label}</span>
+                    <a href={contact.href}>{contact.value}</a>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
-        </div>
+        </section>
       </div>
-      <div className={s.copyright}>Copyright 2000 - 2026</div>
-    </div>
+
+      <div className={s.footerBottom}>
+        <span>Copyright 2026 Interior Studio</span>
+        <span>{addressInfo[1]}</span>
+        <span>{hoursInfo[1]}</span>
+      </div>
+    </footer>
   );
 }

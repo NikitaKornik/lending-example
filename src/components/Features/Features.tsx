@@ -7,43 +7,53 @@ import TimeSvg from "@/assets/icons/time.svg?react";
 
 export default function Features() {
   return (
-    <ul className={s.root}>
-      <li className={s.item}>
-        <div className={s.svg}>
-          <ShieldSvg />
-        </div>
-        <h5 className={s.title}>Personalized Approach</h5>
-        <span className={s.info}>
-          We listen to your needs and create a design that suits you.
-        </span>
-      </li>
-      <li className={s.item}>
-        <div className={s.svg}>
-          <BoxSvg />
-        </div>
-        <h5 className={s.title}>Functional Spaces</h5>
-        <span className={s.info}>
-          We design spaces that are beautiful and practical.
-        </span>
-      </li>
-      <li className={s.item}>
-        <div className={s.svg}>
-          <GraphSvg />
-        </div>
-        <h5 className={s.title}>High Quality</h5>
-        <span className={s.info}>
-          We use premium materials and trusted suppliers.
-        </span>
-      </li>
-      <li className={s.item}>
-        <div className={s.svg}>
-          <TimeSvg />
-        </div>
-        <h5 className={s.title}>On Time</h5>
-        <span className={s.info}>
-          We deliver projects on time and within budget.
-        </span>
-      </li>
-    </ul>
+    <section className={s.root}>
+      <div className={s.header}>
+        <span>Why clients choose us</span>
+        <h2>Design support from the first idea to the final cushion.</h2>
+      </div>
+      <ul className={s.list}>
+        <li className={s.item}>
+          <div className={s.svg}>
+            <ShieldSvg />
+          </div>
+          <h5 className={s.title}>Personal direction</h5>
+          <span className={s.info}>
+            We translate your habits, taste, and routines into a space that
+            feels natural every day.
+          </span>
+        </li>
+        <li className={s.item}>
+          <div className={s.svg}>
+            <BoxSvg />
+          </div>
+          <h5 className={s.title}>Practical layouts</h5>
+          <span className={s.info}>
+            Every room is planned around storage, light, movement, and the way
+            people actually use it.
+          </span>
+        </li>
+        <li className={s.item}>
+          <div className={s.svg}>
+            <GraphSvg />
+          </div>
+          <h5 className={s.title}>Curated materials</h5>
+          <span className={s.info}>
+            We source durable finishes, furniture, and lighting from trusted
+            makers and suppliers.
+          </span>
+        </li>
+        <li className={s.item}>
+          <div className={s.svg}>
+            <TimeSvg />
+          </div>
+          <h5 className={s.title}>Clear timelines</h5>
+          <span className={s.info}>
+            You get a realistic schedule, transparent milestones, and steady
+            communication.
+          </span>
+        </li>
+      </ul>
+    </section>
   );
 }

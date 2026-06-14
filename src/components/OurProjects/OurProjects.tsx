@@ -1,11 +1,10 @@
-import Btn from "../ui/Btn/Btn";
 import cn from "classnames";
+import { Link } from "react-router-dom";
 
 import s from "./OurProjects.module.scss";
 
-import test from "@/assets/images/test.jpg";
-import hero from "@/assets/images/hero.jpg";
 import { useState } from "react";
+import { projects } from "../../data/projects";
 
 const filter = [
   {
@@ -30,59 +29,6 @@ const filter = [
   },
 ];
 
-const projects = [
-  {
-    title: "Minimalist Living Room",
-    design: "Modern",
-    url: "#",
-    img: test,
-    category: "Living Room",
-    key: 0,
-  },
-  {
-    title: "Elegant Kitchen",
-    design: "Contemporan",
-    url: "#",
-    img: test,
-    category: "Kitchen",
-    key: 1,
-  },
-  {
-    title: "Cozy Bedroom",
-    design: "Scandinavien",
-    url: "#",
-    img: test,
-    category: "Bedroom",
-    key: 2,
-  },
-  {
-    title: "Luxury Bathroom",
-    design: "Modern",
-    url: "#",
-    img: test,
-    category: "Bedroom",
-    key: 3,
-  },
-  {
-    title: "Dining Room",
-    design: "Contemporary",
-    url: "#",
-    img: test,
-    category: "Bathroom",
-    key: 4,
-  },
-  {
-    title: "Loft Interior",
-    design: "Industrial",
-    url: "#",
-    img: test,
-    category: "Bathroom",
-    key: 5,
-  },
-];
-
-type selectCategory = {};
-
 export default function OurProjects() {
   const [active, setActive] = useState("All");
 
@@ -91,8 +37,15 @@ export default function OurProjects() {
   }
 
   return (
-    <div className={s.root}>
-      <h2 className={s.h2}>Our Latest Projects</h2>
+    <section className={s.root}>
+      <div className={s.heading}>
+        <span>Selected work</span>
+        <h2 className={s.h2}>Our Latest Projects</h2>
+        <p>
+          A small look at finished homes, calm palettes, tactile materials, and
+          rooms designed to be lived in.
+        </p>
+      </div>
       <ul className={s.filter}>
         {filter.map((item) => {
           return (
@@ -117,21 +70,31 @@ export default function OurProjects() {
           .slice(0, 6)
           .map((project) => {
             return (
-              <li key={project.key} className={s.project}>
-                <a href={project.url} className={s.imgContainer}>
-                  <img className={s.img} src={hero} />
-                </a>
-                <a className={s.a} href="#">
+              <li key={project.id} className={s.project}>
+                <Link
+                  to={`/projects/${project.slug}`}
+                  className={s.imgContainer}
+                >
+                  <img
+                    className={s.img}
+                    src={project.img}
+                    alt={`${project.title} interior design project`}
+                    loading="lazy"
+                  />
+                </Link>
+                <Link className={s.a} to={`/projects/${project.slug}`}>
                   {project.title}
-                </a>
-                <span className={s.category}>{project.category}</span>
+                </Link>
+                <span className={s.category}>
+                  {project.category} / {project.design}
+                </span>
               </li>
             );
           })}
       </ul>
-      <Btn className={s.btn} variant="primary">
+      <Link className={s.btn} to="/projects">
         View All Projects
-      </Btn>
-    </div>
+      </Link>
+    </section>
   );
 }

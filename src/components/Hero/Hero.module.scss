@@ -2,90 +2,186 @@
 @import "/src/styles/breakpoints.scss";
 
 .root {
-  margin-bottom: 80px;
-  height: 690px;
+  position: relative;
+  display: grid;
+  gap: 32px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 96px;
+  padding: 48px 20px 0;
+  min-height: 720px;
+  overflow: hidden;
 
   .imgWrapper {
     position: relative;
     overflow: hidden;
-    z-index: -1;
+    min-height: 360px;
+    border-radius: 8px;
 
     &::before {
       content: "";
-
       position: absolute;
       inset: 0;
-
       background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(255, 255, 255, 1) 80%
+        180deg,
+        var(--black-04) 0%,
+        var(--black-22) 100%
       );
-
-
-      @include md {
-        background: linear-gradient(
-          295deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0) 30%,
-          rgba(255, 255, 255, 1) 50%
-        );
-      }
+      z-index: 1;
     }
 
     @include md {
-      width: 100%;
+      width: 58%;
       position: absolute;
-      top: 0;
-      left: 0;
-      height: 100vh;
+      top: 28px;
+      right: 24px;
+      height: calc(100% - 56px);
     }
   }
 
   img {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    z-index: -2;
+    display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 100%;
+    object-fit: cover;
 
     @include md {
-      position: absolute;
-      width: auto;
-      height: 100vh;
-      top: 0;
+      min-height: 640px;
     }
   }
 
   .info {
-    margin: 20px;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    padding: 20px 0;
 
     @include md {
-      transform: translateY(40%);
-      width: 60%;
+      display: flex;
+      min-height: 640px;
+      width: 52%;
+      flex-direction: column;
+      justify-content: center;
     }
 
     @include lg {
-      width: 40%;
+      width: 48%;
+    }
+
+    & > h5 {
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid var(--black-16);
+      border-radius: 999px;
+      color: var(--color-text-caramel);
+      font-size: var(--text-xs);
+      letter-spacing: 0.12em;
+      background: var(--white-82);
     }
 
     .btns {
       display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid var(--color-black);
+        border-radius: 8px;
+        color: var(--color-black);
+        font-weight: var(--fw-semibold);
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+
+        &:first-child {
+          background: var(--color-black);
+          color: var(--color-white);
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
     }
 
     & > h3 {
-      font-size: var(--text-5xl);
-      margin: 20px 0px;
+      max-width: 560px;
+      font-size: 42px;
+      line-height: var(--lh-tight);
+      margin: 22px 0 18px;
+
+      @include md {
+        font-size: var(--text-5xl);
+      }
     }
 
     .desc {
       font-size: var(--text-xl);
-      margin: 20px 0px;
+      line-height: var(--lh-normal);
+      color: var(--text-secondary);
+      margin: 0 0 28px;
+      max-width: 520px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      list-style: none;
+      max-width: 520px;
+      margin-bottom: 30px;
+
+      li {
+        padding: 16px 14px;
+        border: 1px solid var(--black-10);
+        border-radius: 8px;
+        background: var(--white-82);
+      }
+
+      strong {
+        display: block;
+        font-size: var(--text-2xl);
+        line-height: 1;
+      }
+
+      span {
+        display: block;
+        margin-top: 8px;
+        color: var(--text-muted);
+        font-size: var(--text-sm);
+      }
+    }
+  }
+
+  .note {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2;
+    max-width: 250px;
+    padding: 18px;
+    border-radius: 8px;
+    background: var(--white-90);
+    box-shadow: 0 16px 45px var(--black-18);
+
+    span,
+    strong {
+      display: block;
+    }
+
+    span {
+      color: var(--text-muted);
+      font-size: var(--text-sm);
+      margin-bottom: 6px;
+    }
+
+    strong {
+      font-size: var(--text-lg);
     }
   }
 }

@@ -1,0 +1,103 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.mark {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+}
+
+.mark::before,
+.mark::after,
+.corner {
+  content: "";
+  position: absolute;
+  display: block;
+  background: currentColor;
+}
+
+.mark::before {
+  width: 19px;
+  height: 2px;
+  left: 8px;
+  top: 14px;
+}
+
+.mark::after {
+  width: 2px;
+  height: 20px;
+  left: 26px;
+  top: 14px;
+}
+
+.corner {
+  width: 13px;
+  height: 13px;
+  right: 7px;
+  bottom: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  background: transparent;
+}
+
+.monogram {
+  position: absolute;
+  left: 8px;
+  bottom: 7px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1;
+
+  strong {
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
+
+.dark {
+  color: var(--color-black);
+
+  .mark {
+    color: var(--color-black);
+    background: var(--white-72);
+  }
+
+  .text span {
+    color: var(--color-text-warm);
+  }
+}
+
+.light {
+  color: var(--color-white);
+
+  .mark {
+    color: var(--color-white);
+    background: var(--white-06);
+  }
+
+  .text span {
+    color: var(--white-62);
+  }
+}

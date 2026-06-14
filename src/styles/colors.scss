@@ -1,21 +1,79 @@
 :root {
-  --black: #111111;
-  --white: #ffffff;
+  /* core */
+  --color-black: #111111;
+  --color-white: #ffffff;
 
-  --sand: #d6c3a5;
-  --sand-light: #efe6d6;
-  --sand-dark: #b8a07a;
+  /* warm neutrals */
+  --color-cream: #fffdf9;
+  --color-cream-muted: #f8f5ef;
+  --color-sand: #d6c3a5;
+  --color-sand-light: #efe6d6;
+  --color-sand-dark: #b8a07a;
+  --color-surface-warm: #f4eee6;
+  --color-surface-warm-soft: #f2eee8;
+  --color-surface-neutral: #f6f3ee;
+
+  /* text accents */
+  --color-text-dark: #2d2a25;
+  --color-text-secondary: #4b4b4b;
+  --color-text-muted: #7a7a7a;
+  --color-text-warm: #5f574d;
+  --color-text-caramel: #6f5f4f;
+  --color-text-bronze: #7e6b55;
+  --color-text-stone: #8b7d6d;
+  --color-accent-gold: #b48952;
+
+  /* borders and utility surfaces */
+  --color-border: #e7e0d6;
+  --color-control-muted: rgb(220, 220, 220);
+  --color-footer-muted: rgb(150, 150, 150);
+
+  /* transparent black */
+  --black-04: rgba(17, 17, 17, 0.04);
+  --black-05: rgba(17, 17, 17, 0.05);
+  --black-06: rgba(17, 17, 17, 0.06);
+  --black-08: rgba(17, 17, 17, 0.08);
+  --black-10: rgba(17, 17, 17, 0.1);
+  --black-12: rgba(17, 17, 17, 0.12);
+  --black-14: rgba(17, 17, 17, 0.14);
+  --black-16: rgba(17, 17, 17, 0.16);
+  --black-18: rgba(17, 17, 17, 0.18);
+  --black-22: rgba(17, 17, 17, 0.22);
+  --black-24: rgba(17, 17, 17, 0.24);
+  --black-28: rgba(17, 17, 17, 0.28);
+  --black-32: rgba(17, 17, 17, 0.32);
+  --black-40: rgba(17, 17, 17, 0.4);
+
+  /* transparent white */
+  --white-06: rgba(255, 255, 255, 0.06);
+  --white-18: rgba(255, 255, 255, 0.18);
+  --white-62: rgba(255, 255, 255, 0.62);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-72: rgba(255, 255, 255, 0.72);
+  --white-76: rgba(255, 255, 255, 0.76);
+  --white-78: rgba(255, 255, 255, 0.78);
+  --white-82: rgba(255, 255, 255, 0.82);
+  --white-90: rgba(255, 255, 255, 0.9);
+  --cream-88: rgba(255, 253, 249, 0.88);
+
+  /* legacy aliases */
+  --black: var(--color-black);
+  --white: var(--color-white);
+
+  --sand: var(--color-sand);
+  --sand-light: var(--color-sand-light);
+  --sand-dark: var(--color-sand-dark);
 
   /* text */
   --text-primary: var(--black);
-  --text-secondary: #4b4b4b;
-  --text-muted: #7a7a7a;
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
 
   /* background */
   --bg-primary: var(--white);
-  --bg-secondary: #f6f3ee;
+  --bg-secondary: var(--color-surface-neutral);
   --bg-accent: var(--sand-light);
 
   /* borders */
-  --border: #e7e0d6;
+  --border: var(--color-border);
 }

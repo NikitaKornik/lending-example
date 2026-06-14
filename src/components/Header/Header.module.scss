@@ -1,25 +1,35 @@
 @import "/src/styles/breakpoints.scss";
 
 .root {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 18px;
   width: 100%;
-  padding: 10px 30px;
+  margin: 0 auto;
   max-width: 1440px;
-  z-index: 1;
-  height: 65px;
-  padding: 0px 20px;
+  z-index: 20;
+  min-height: 76px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--black-08);
+  background: var(--cream-88);
+  backdrop-filter: blur(16px);
 
   .logo {
-    height: 100%;
+    min-height: 48px;
+    min-width: 210px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 
-    & > img {
-      height: 80%;
-      width: auto;
+    &:hover {
+      opacity: 0.82;
+      transform: translateY(-1px);
     }
   }
 
@@ -37,34 +47,35 @@
       justify-content: center;
       align-items: center;
       list-style-type: none;
+      gap: 6px;
+      padding: 6px;
+      border: 1px solid var(--black-08);
+      border-radius: 999px;
+      background: var(--white-72);
+      box-shadow: 0 12px 40px var(--black-06);
 
       li {
-        height: 55px;
+        height: 42px;
         a {
           height: 100%;
-          color: black;
+          color: var(--color-text-dark);
           text-decoration: none;
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 0px 20px;
+          padding: 0 18px;
+          border-radius: 999px;
+          font-weight: 600;
+          transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
           span {
             position: relative;
-            &::after {
-              content: "";
-              position: absolute;
-              width: 0%;
-              height: 2px;
-              top: 20px;
-              left: 0;
-              background-color: black;
-              transition: width 0.2s ease-in-out;
-            }
           }
 
-          &:hover span::after {
-            width: 100%;
+          &:hover,
+          &[aria-current="page"] {
+            color: var(--color-black);
+            background: var(--color-surface-warm);
           }
         }
       }
@@ -76,6 +87,10 @@
 
     @include lg {
       display: flex;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      box-shadow: 0 12px 30px var(--black-12);
     }
   }
 }

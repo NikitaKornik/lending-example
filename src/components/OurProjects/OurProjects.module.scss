@@ -7,17 +7,38 @@
   align-items: center;
   flex-direction: column;
 
+  width: 100%;
   max-width: 1440px;
-  margin: 0px auto;
-  padding: 0px 30px;
-  margin-bottom: 80px;
+  margin: 0 auto 96px;
+  padding: 0 20px;
   overflow: hidden;
   box-sizing: border-box;
+
+  .heading {
+    max-width: 720px;
+    text-align: center;
+    margin-bottom: 34px;
+
+    span {
+      display: block;
+      color: var(--color-text-bronze);
+      font-size: var(--text-sm);
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: var(--text-lg);
+      line-height: var(--lh-normal);
+      margin-top: 14px;
+    }
+  }
 
   .h2 {
     text-align: center;
     font-size: var(--text-3xl);
-    margin-bottom: 50px;
 
     @include md {
       font-size: var(--text-4xl);
@@ -27,32 +48,39 @@
   .filter {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 12px;
 
-    width: 82vw;
-    min-width: 330px;
-    max-width: max-content;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 
     overflow-x: auto;
     list-style-type: none;
     margin-bottom: 50px;
 
+    @include md {
+      justify-content: center;
+    }
+
     .filterItem {
       cursor: pointer;
 
       white-space: nowrap;
-      background-color: rgb(223, 223, 223);
-      border-radius: 15px;
-      padding: 10px 20px;
-      transition: opacity 0.2s ease-in-out, background-color 0.4s ease-in-out;
+      background-color: var(--color-surface-warm-soft);
+      border: 1px solid var(--black-08);
+      border-radius: 999px;
+      padding: 10px 18px;
+      transition: color 0.2s ease-in-out, background-color 0.25s ease-in-out,
+        border-color 0.25s ease-in-out;
 
       &:hover {
-        opacity: 0.8;
+        border-color: var(--black-24);
       }
 
       &.active {
-        background-color: black;
-        color: white;
+        background-color: var(--color-black);
+        color: var(--color-white);
       }
     }
   }
@@ -60,7 +88,7 @@
   .projects {
     list-style-type: none;
     display: grid;
-    gap: 25px;
+    gap: 28px;
     width: 100%;
     margin-bottom: 50px;
 
@@ -74,11 +102,14 @@
 
     .project {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0px 20px;
+      grid-template-columns: 120px 1fr;
+      gap: 6px 18px;
       grid-template-areas:
         "img h3"
         "img category";
+      align-items: end;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--black-10);
 
       @include md {
         grid-template-columns: 1fr;
@@ -88,6 +119,8 @@
           "img"
           "h3"
           "category";
+        padding-bottom: 0;
+        border-bottom: none;
       }
 
       .imgContainer {
@@ -97,22 +130,19 @@
         align-items: center;
         width: 100%;
         aspect-ratio: 4 / 3;
-        border-radius: 10px;
+        border-radius: 8px;
         overflow: hidden;
+        background: var(--color-surface-warm-soft);
 
         @include md {
-          aspect-ratio: 2 / 1;
+          aspect-ratio: 4 / 3;
         }
 
         .img {
           height: 100%;
-          width: auto;
+          width: 100%;
+          object-fit: cover;
           transition: transform 0.5s ease-in-out;
-
-          @include md {
-            height: auto;
-            width: 100%;
-          }
 
           &:hover {
             transform: scale(1.05);
@@ -122,18 +152,38 @@
 
       .a {
         text-decoration: none;
-        color: black;
+        color: var(--color-black);
         display: flex;
         align-items: end;
         grid-area: h3;
-        font-size: var(--text-lg);
+        font-size: var(--text-xl);
         font-weight: bold;
+        line-height: var(--lh-tight);
       }
 
       .category {
         grid-area: category;
-        font-size: var(--text-md);
+        color: var(--text-muted);
+        font-size: var(--text-sm);
       }
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 8px;
+    color: var(--color-white);
+    background: var(--color-black);
+    font-weight: var(--fw-medium);
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.82;
     }
   }
 }

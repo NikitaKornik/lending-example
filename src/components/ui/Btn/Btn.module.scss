@@ -33,13 +33,13 @@
 }
 
 .primary {
-  background: black;
-  color: white;
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 .secondary {
-  background: rgb(220, 220, 220);
-  color: rgb(0, 0, 0);
+  background: var(--color-control-muted);
+  color: var(--color-black);
 }
 
 .disabled {

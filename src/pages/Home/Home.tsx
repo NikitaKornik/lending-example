@@ -3,17 +3,26 @@ import Hero from "../../components/Hero/Hero";
 import HowWeWork from "../../components/HowWeWork/HowWeWork";
 import OurProjects from "../../components/OurProjects/OurProjects";
 import Reviews from "../../components/Reviews/Reviews";
-
-import s from "./Home.module.scss";
+import { FadeIn } from "../../components/ui/animations/Reveal/Reveal";
 
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <Features />
-      <OurProjects />
-      <HowWeWork />
-      <Reviews />
+      <FadeIn>
+        <Hero />
+      </FadeIn>
+      <FadeIn>
+        <Features />
+      </FadeIn>
+      <FadeIn>
+        <OurProjects />
+      </FadeIn>
+      <FadeIn>
+        <HowWeWork />
+      </FadeIn>
+      <FadeIn>
+        <Reviews />
+      </FadeIn>
     </div>
   );
 }
