@@ -25,6 +25,15 @@ export const contacts = [
   },
 ];
 
+export const consultationRoomTypes = [
+  "Whole home",
+  "Living room",
+  "Kitchen",
+  "Bedroom",
+  "Bathroom",
+  "Not sure yet",
+];
+
 export const visitInfo = [
   ["Address", "214 Crosby Street, New York, NY"],
   ["Hours", "Mon - Fri, 10:00 - 18:00"],

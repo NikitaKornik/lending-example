@@ -169,21 +169,4 @@
     }
   }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 0 18px;
-    border-radius: 8px;
-    color: var(--color-white);
-    background: var(--color-black);
-    font-weight: var(--fw-medium);
-    text-decoration: none;
-    transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 0.82;
-    }
-  }
 }

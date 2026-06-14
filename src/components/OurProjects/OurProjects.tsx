@@ -1,33 +1,13 @@
 import cn from "classnames";
 import { Link } from "react-router-dom";
 
+import LinkButton from "../ui/LinkButton/LinkButton";
 import s from "./OurProjects.module.scss";
 
 import { useState } from "react";
-import { projects } from "../../data/projects";
+import { projectCategories, projects } from "../../data/projects";
 
-const filter = [
-  {
-    text: "All",
-    key: 0,
-  },
-  {
-    text: "Living Room",
-    key: 1,
-  },
-  {
-    text: "Kitchen",
-    key: 2,
-  },
-  {
-    text: "Bedroom",
-    key: 3,
-  },
-  {
-    text: "Bathroom",
-    key: 4,
-  },
-];
+const filter = ["All", ...projectCategories];
 
 export default function OurProjects() {
   const [active, setActive] = useState("All");
@@ -50,13 +30,13 @@ export default function OurProjects() {
         {filter.map((item) => {
           return (
             <li
-              key={item.key}
+              key={item}
               className={cn(s.filterItem, {
-                [s.active]: active === item.text,
+                [s.active]: active === item,
               })}
-              onClick={() => selectCategory(item.text)}
+              onClick={() => selectCategory(item)}
             >
-              {item.text}
+              {item}
             </li>
           );
         })}
@@ -92,9 +72,9 @@ export default function OurProjects() {
             );
           })}
       </ul>
-      <Link className={s.btn} to="/projects">
+      <LinkButton to="/projects">
         View All Projects
-      </Link>
+      </LinkButton>
     </section>
   );
 }

@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+import LinkButton from "../../components/ui/LinkButton/LinkButton";
 import { FadeIn } from "../../components/ui/animations/Reveal/Reveal";
 import s from "./Studio.module.scss";
 
@@ -76,8 +75,10 @@ export default function Studio() {
               precious.
             </p>
             <div className={s.heroActions}>
-              <Link to="/projects">View projects</Link>
-              <Link to="/contact">Start a conversation</Link>
+              <LinkButton to="/projects">View projects</LinkButton>
+              <LinkButton to="/contact" variant="secondary">
+                Start a conversation
+              </LinkButton>
             </div>
           </div>
           <div className={s.heroImage}>
@@ -167,7 +168,7 @@ export default function Studio() {
         <section className={s.cta}>
           <span className={s.eyebrow}>Next step</span>
           <h2>Bring us the room, the problem, or the mood you cannot quite name.</h2>
-          <Link to="/contact">Book a consultation</Link>
+          <LinkButton to="/contact">Book a consultation</LinkButton>
         </section>
       </FadeIn>
     </main>

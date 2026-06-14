@@ -36,27 +36,6 @@
   }
 }
 
-.cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 18px;
-  border: 1px solid var(--white-18);
-  border-radius: 8px;
-  color: var(--color-white);
-  font-weight: var(--fw-semibold);
-  text-decoration: none;
-  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
-
-  &:hover {
-    border-color: var(--color-white);
-    background: var(--white-06);
-    transform: translateY(-2px);
-  }
-}
-
 .title {
   margin-bottom: 18px;
   color: var(--white-62);

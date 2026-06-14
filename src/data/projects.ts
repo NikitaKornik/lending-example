@@ -20,6 +20,10 @@ export type Project = {
 
 export const projects = projectsData as Project[];
 
+export const projectCategories = Array.from(
+  new Set(projects.map((project) => project.category))
+).sort();
+
 export function getProjectBySlug(slug: string | undefined) {
   return projects.find((project) => project.slug === slug);
 }

@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FadeIn } from "../../components/ui/animations/Reveal/Reveal";
-import { projects } from "../../data/projects";
+import { projectCategories, projects } from "../../data/projects";
 import s from "./Projects.module.scss";
 
 const ITEMS_PER_PAGE = 6;
@@ -17,6 +17,8 @@ const filterLabels: Record<FilterKey, string> = {
 };
 
 function getOptions(key: FilterKey) {
+  if (key === "category") return [ALL, ...projectCategories];
+
   return [ALL, ...Array.from(new Set(projects.map((project) => project[key]))).sort()];
 }
 

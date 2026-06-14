@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+import LinkButton from "../ui/LinkButton/LinkButton";
 import s from "./Hero.module.scss";
 
 const heroImg =
@@ -30,8 +29,10 @@ export default function Hero() {
           </li>
         </ul>
         <div className={s.btns}>
-          <Link to="/projects">Our Projects</Link>
-          <Link to="/contact">Book a consultation</Link>
+          <LinkButton to="/projects">Our Projects</LinkButton>
+          <LinkButton to="/contact" variant="secondary">
+            Book a consultation
+          </LinkButton>
         </div>
       </div>
       <div className={s.imgWrapper}>

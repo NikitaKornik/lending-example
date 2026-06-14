@@ -51,30 +51,6 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
-
-  a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 46px;
-    padding: 0 18px;
-    border: 1px solid var(--color-black);
-    border-radius: 8px;
-    color: var(--color-black);
-    font-weight: var(--fw-semibold);
-    text-decoration: none;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
-      color 0.2s ease-in-out;
-
-    &:first-child {
-      background: var(--color-black);
-      color: var(--color-white);
-    }
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
 }
 
 .heroImage,
@@ -341,21 +317,4 @@
     }
   }
 
-  a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 46px;
-    padding: 0 18px;
-    border-radius: 8px;
-    background: var(--color-black);
-    color: var(--color-white);
-    font-weight: var(--fw-semibold);
-    text-decoration: none;
-    transition: transform 0.2s ease-in-out;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
 }

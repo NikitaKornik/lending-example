@@ -1,22 +1,13 @@
 import { type FormEvent, useCallback, useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
 
-import { contacts } from "../../data/contact";
+import { consultationRoomTypes, contacts } from "../../data/contact";
 import s from "./ConsultationModal.module.scss";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
 };
-
-const roomTypes = [
-  "Whole home",
-  "Living room",
-  "Kitchen",
-  "Bedroom",
-  "Bathroom",
-  "Not sure yet",
-];
 
 export default function ConsultationModal({ isOpen, onClose }: Props) {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -121,7 +112,7 @@ export default function ConsultationModal({ isOpen, onClose }: Props) {
                   <option disabled value="">
                     Choose one
                   </option>
-                  {roomTypes.map((roomType) => (
+                  {consultationRoomTypes.map((roomType) => (
                     <option key={roomType} value={roomType}>
                       {roomType}
                     </option>

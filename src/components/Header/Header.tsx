@@ -4,6 +4,7 @@ import { useState } from "react";
 import BrandLogo from "../BrandLogo/BrandLogo";
 import ConsultationModal from "../ConsultationModal/ConsultationModal";
 import Btn from "../ui/Btn/Btn";
+import { mainNavLinks } from "../../data/navigation";
 
 import s from "./Header.module.scss";
 
@@ -21,26 +22,13 @@ export default function Header() {
         </Link>
         <Btn className={s.burgerMenu} leftIcon={<BurgerMenu />}></Btn>
         <ul className={s.nav}>
-          <li>
-            <NavLink to="/" end>
-              <span>Home</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/studio">
-              <span>Studio</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/projects">
-              <span>Projects</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">
-              <span>Contact</span>
-            </NavLink>
-          </li>
+          {mainNavLinks.map((link) => (
+            <li key={link.to}>
+              <NavLink end={link.end} to={link.to}>
+                <span>{link.label}</span>
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <Btn
           className={s.signBtn}
